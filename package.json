@@ -19,6 +19,8 @@
   "homepage": "https://github.com/evanteems/the-social#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.12.4"
+    "moment": "^2.29.1",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.5"
   }
 }
