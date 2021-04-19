@@ -1,53 +1,61 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types} = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
-const PizzaSchema = new Schema(
+const ReactionSchema = new Schema(
     {
-        pizzaName: {
-            type: String,
-            required: true,
-            trim: true
+        reactionId: {
+            type: Schema.Types.ObjectId,
+            default: () => new Types.ObjectId()
         },
-        createdBy: {
+        reactionBody: {
+            type: String,
+            require: true,
+            maxLength: 280
+        },
+        userName: {
+            type: String,
+            required: true
+        },
+    },
+    {
+        toJSON: {
+            getters: true
+        }
+    }
+);
+
+const ThoughtSchema = new Schema(
+    {
+        thoughtText: {
             type: String,
             required: true,
-            trim: true
+            minLength: 1,
+            maxLength: 280
         },
         createdAt: {
             type: Date,
             default: Date.now,
             get: createdAtVal => dateFormat(createdAtVal)
         },
-        size: {
+        userName: {
             type: String,
-            required: true,
-            enum: ['Personal', 'Small', 'Medium', 'Large', 'Extra Large'],
-            default: 'Large'
+            required: true
         },
-        toppings: [],
-        comments: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'Comment'
-            }
-        ]
+        reactions: [ReactionSchema],
+
     },
     {
         toJSON: {
             virtuals: true,
             getters: true
-        },
-        id: false
+        }
     }
 );
 
-PizzaSchema.virtual('commentCount').get(function() {
-    return this.comments.reduce(
-        (total, comment) => total + comment.replies.length + 1,
-        0
-    );
+ThoughtSchema.virtual('reactionCount').get(function () {
+    return this.reactions.length;
 });
 
-const Pizza = model('Pizza', PizzaSchema);
+const Thought = model('Thought', ThoughtSchema);
 
-module.exports = Pizza;
+module.exports = Thought;
