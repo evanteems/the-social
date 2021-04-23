@@ -1,6 +1,6 @@
 const { Thought } = require('../models');
 
-const ReactionControlller = {
+const ReactionController = {
     // Add reaction!!
     addReaction({ params, body }, res) {
         Thought.findOneAndUpdate(
@@ -35,4 +35,4 @@ const ReactionControlller = {
     }
 };
 
-module.exports = ReactionControlller;
+module.exports = ReactionController;
