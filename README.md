@@ -18,3 +18,20 @@ This is a Restful API that uses a back end for social networking website. It als
   5. Next type the following command for node_modules: 'npm install'
   6. Check the new node_modules folder to make sure you have the correct packages installed
   7. This application used MongoDB. to download MongoDB follow these steps [on their site](https://docs.mongodb.com/manual/installation/)
+  8. To easily test the Api and the query to show results, you must use the application Insomnia Core. Insomnia core is the root of making this project work. You can create direct routes with proper endpoints. Insomnia also helps with testing (CRUD) operations. To download Insomnia app click [here](https://insomnia.rest/download). Once you have Insomnia downloaded you are ready to go! When using insomnia, you can navigate to http://localhost:3001/api/</enter desired endpoint> once you have started the server with the command 'npm start'. For example, to insert users you write the url http://localhost/api/users!
+  9. Once everything that was previously explained is installed, your ready to user the-social API!
+
+# Usage
+If you want a walkthrough on how this all works, please watch here. [Walkthrough video: Users](https://youtu.be/9eVSfSkf9J4), [Walkthrough video: Thoughts](https://youtu.be/D-XL-t4ER4I), [Wa;lthough video: Reactions](https://youtu.be/P-za5cb-7Cg).
+
+# License
+MIT license Copyright
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software with restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS:, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
+
+# Questions
+If you have any questions or want to collaberate in the future, you can reach the author of this repository from their github (https://github.com/evanteems)!
