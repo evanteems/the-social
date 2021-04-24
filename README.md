@@ -17,4 +17,4 @@ This is a Restful API that uses a back end for social networking website. It als
   4. Once you have Node.js installed onto your computer, navigate into vscode and go to terminal on the top of the screen. Next make a new terminal with the option 'Open in intergrated terminal'.
   5. Next type the following command for node_modules: 'npm install'
   6. Check the new node_modules folder to make sure you have the correct packages installed
-  7. This application used MongoDB. to download MongoDB follow these steps [on their site](#https://docs.mongodb.com/manual/installation/)
+  7. This application used MongoDB. to download MongoDB follow these steps [on their site](https://docs.mongodb.com/manual/installation/)
